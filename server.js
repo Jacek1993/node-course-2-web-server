@@ -1,6 +1,8 @@
 const express=require('express');
 const hbs=require('hbs');
 const fs=require('fs');
+const port = process.env.PORT || 3000;              //zmienne process.env przechowywane sa w formie mapy key value
+//jesli proces.env.PORT nie istnieje wtedy ustawiamy nasza zmienna port na 3000
 //PARACA Z GITEM
 //views warto a nawet trzeba dodac do repo
 //server.log    nie trzeba bo to sa nasze logi i nikogo to nie obchodzi
@@ -102,6 +104,6 @@ app.get('/bat', (req, res)=>{
 });
 
 
-app.listen(3000, ()=>{
-    console.log('Server os up on port 3000');                       //komunikat pojawia sie wtedy gdy server wstanie
+app.listen(port, ()=>{
+    console.log(`Server os up on port ${port}`);                       //komunikat pojawia sie wtedy gdy server wstanie
 });                        //laczy aplikacje z portem systemu operacyjnego
