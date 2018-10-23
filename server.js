@@ -99,9 +99,17 @@ app.get('/about', (req, res)=>{
     });
 });
 
+app.get('/project',(req, res)=>{
+    res.render('project.hbs', {
+        pageTittle: "Project Page"
+    });
+});
+
 app.get('/bat', (req, res)=>{
     res.send(error);
 });
+
+
 
 
 app.listen(port, ()=>{
